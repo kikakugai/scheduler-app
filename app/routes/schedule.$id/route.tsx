@@ -4,8 +4,12 @@ export default function Route({ params }: { params: { id: string } }) {
   const { id } = params;
 
   return (
-    <main className="container mx-auto py-8 px-4">
-      <ScheduleSelection scheduleId={id} />
-    </main>
+    <div className="min-h-screen bg-gray-50">
+      <div className="mx-auto w-full max-w-5xl">
+        <main className="px-4 py-6 sm:px-6 md:px-8 md:py-8">
+          <ScheduleSelection scheduleId={id} />
+        </main>
+      </div>
+    </div>
   );
 }

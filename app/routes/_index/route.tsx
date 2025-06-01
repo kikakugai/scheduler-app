@@ -1,5 +1,5 @@
-import { ScheduleDashboard } from "~/components/schedule/schedule-dashboard";
-import type { Route } from "./+types/route";
+import { ScheduleDashboard } from "~/components/schedule/schedule-dashboard"
+import type { Route } from "./+types/route"
 
 export default function Route() {
   const user = {
@@ -7,11 +7,15 @@ export default function Route() {
     name: "John Doe",
     email: "john.doe@example.com",
     role: "admin",
-  };
+  }
 
   return (
-    <main className="min-h-screen bg-gray-50">
-      <ScheduleDashboard user={user}></ScheduleDashboard>
-    </main>
-  );
+    <div className="min-h-screen bg-gray-50">
+      <div className="mx-auto w-full max-w-5xl">
+        <main className="px-4 py-6 sm:px-6 md:px-8 md:py-8">
+          <ScheduleDashboard user={user} />
+        </main>
+      </div>
+    </div>
+  )
 }
