@@ -107,7 +107,7 @@ export function ScheduleDashboard({ user }: ScheduleDashboardProps) {
             <TabsTrigger value="pending">
               日程調整依頼
               {SAMPLE_PENDING_SCHEDULES.length > 0 && (
-                <Badge variant="secondary" className="ml-2">
+                <Badge variant="destructive" className="ml-2">
                   {SAMPLE_PENDING_SCHEDULES.length}
                 </Badge>
               )}
@@ -126,9 +126,7 @@ export function ScheduleDashboard({ user }: ScheduleDashboardProps) {
                   </CardHeader>
                   <CardFooter>
                     <NavLink to={`/schedule/${schedule.id}`} className="w-full">
-                      <Button className="w-full">
-                        日程を選択する
-                      </Button>
+                      <Button className="w-full">日程を選択する</Button>
                     </NavLink>
                   </CardFooter>
                 </Card>

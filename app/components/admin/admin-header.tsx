@@ -1,11 +1,10 @@
-import { LayoutDashboard, LogOut, Users } from "lucide-react";
-import { NavLink } from "react-router";
-import { Button } from "../ui/button";
+import { LogOut } from "lucide-react"
+import { Button } from "../ui/button"
 
 interface AdminHeaderProps {
-  heading?: string;
-  text?: string;
-  children?: React.ReactNode;
+  heading?: string
+  text?: string
+  children?: React.ReactNode
 }
 
 export function AdminHeader({ heading, text, children }: AdminHeaderProps) {
@@ -13,21 +12,7 @@ export function AdminHeader({ heading, text, children }: AdminHeaderProps) {
     <div className="space-y-4">
       <nav className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <NavLink
-            to="/admin"
-            className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground"
-          >
-            <LayoutDashboard className="h-4 w-4" />
-            ダッシュボード
-          </NavLink>
-
-          <NavLink
-            to="/admin/users"
-            className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground"
-          >
-            <Users className="h-4 w-4" />
-            ユーザー管理
-          </NavLink>
+          <h1 className="text-xl font-bold">管理者ダッシュボード</h1>
         </div>
 
         <Button variant="outline" size="sm" className="gap-2">
@@ -46,5 +31,5 @@ export function AdminHeader({ heading, text, children }: AdminHeaderProps) {
         </div>
       )}
     </div>
-  );
+  )
 }
