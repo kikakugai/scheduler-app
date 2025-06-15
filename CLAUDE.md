@@ -121,35 +121,62 @@ The application includes Japanese text and is likely intended for Japanese users
 - View/modify booking details
 - Self-cancel bookings
 
-### Current Implementation Status
+### Implementation Roadmap
 
-#### ✅ Implemented
-- **UI/UX Components**: Complete shadcn/ui component library with TailwindCSS v4
-- **Routing**: Full React Router v7 file-based routing system
-- **Admin Interface**: Dashboard with tabs for appointment management and user management
-- **User Interface**: Schedule dashboard with booking flow UI
-- **Responsive Design**: Mobile and desktop optimized layouts
-- **Dark Mode**: Theme support with next-themes
+#### Phase 1: Infrastructure
 
-#### 🟡 Partially Implemented  
-- **Admin Functions**: UI components exist but lack backend integration
-- **User Booking**: Frontend booking flow exists but no database persistence
-- **Schedule Management**: Display components ready but no CRUD operations
+- [ ] Create and configure Firebase project
+- [ ] Initialize Firestore database
+- [ ] Set up environment variables (.env.local)
+- [ ] Install and configure Firebase SDK
+- [ ] Implement basic connection tests
 
-#### ❌ Not Implemented
-- **Authentication**: No Slack OAuth integration (login/register routes are placeholders)
-- **Database**: Using mock data only, no Firestore integration
-- **API Layer**: No data fetching or mutation logic
-- **Error Handling**: No network error or validation handling
-- **Testing**: No testing framework configured
-- **Security**: No input validation or data protection beyond TypeScript
+#### Phase 2: Authentication
 
-#### 🎯 Priority Implementation Tasks
-1. Firebase/Firestore setup and integration
-2. Slack OAuth authentication implementation  
-3. API layer for CRUD operations
-4. Error handling and validation
-5. Data migration from mock to Firestore
+- [ ] Create Slack OAuth application
+- [ ] Implement authentication flow (login/logout)
+- [ ] Set up user session management
+- [ ] Create authentication middleware
+- [ ] Implement admin privilege checks
+
+#### Phase 3: Data Layer
+
+- [ ] Design Firestore collections schema
+- [ ] Implement User CRUD operations
+- [ ] Implement ScheduleFrame CRUD operations
+- [ ] Implement Appointment CRUD operations
+- [ ] Create mock data migration script
+
+#### Phase 4: Admin Features
+
+- [ ] Schedule frame creation and editing
+- [ ] Appointment list and detail views
+- [ ] Appointment cancellation and modification
+- [ ] User management interface
+- [ ] Bulk schedule application
+
+#### Phase 5: User Features
+
+- [ ] Display available time slots
+- [ ] Implement booking flow
+- [ ] Personal appointment list
+- [ ] Appointment modification and cancellation
+- [ ] Booking confirmation emails/notifications
+
+#### Phase 6: Quality Improvements
+
+- [ ] Implement error handling
+- [ ] Strengthen form validation
+- [ ] Set up testing framework
+- [ ] Add loading state management
+- [ ] Performance optimization
+
+### Current Status
+
+- ✅ **UI/UX Components**: Complete shadcn/ui component library with TailwindCSS v4
+- ✅ **Routing**: Full React Router v7 file-based routing system
+- ✅ **Frontend Structure**: All major components and pages created
+- 🔄 **Backend Integration**: Pending Phase 1-3 implementation
 
 ### Security
 
